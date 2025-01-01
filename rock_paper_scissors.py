@@ -1,11 +1,13 @@
 # ROCK, PAPER, SCISSORS GAME
 
 import random
-choices = ["rock","paper","scissors"]
+
+choices = ["rock", "paper", "scissors"]
 computer = random.choice(choices)
 
+
 def main():
-    player = input("Rock, paper, scissors?: ")
+    player = input("Rock, paper, scissors?: ").lower()
 
     if player not in choices:
         print("you wrote wrong")
@@ -29,9 +31,9 @@ def main():
     print(f"computer made: {computer}")
     print("-------------------------")
 
+
 def askAgain():
-    check_again = input("Do you wanna play again (Yes or no): ")
-    
+    check_again = input("Do you wanna play again (Yes or no): ").lower()
 
     if check_again == "yes":
         main()
@@ -40,6 +42,7 @@ def askAgain():
     else:
         print("What do you mean?")
         askAgain()
+
 
 main()
 askAgain()
